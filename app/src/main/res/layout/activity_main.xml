@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ggn"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-42dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Guess it!!!"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="30dp"
+            android:textStyle="italic">
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_marginLeft="50px"
+            android:text="00:00"
+            android:textAlignment="center"
+            android:paddingTop="50px"
+            android:background="@drawable/pink_button"
+            android:textColor="@color/purple_500"
+            android:textSize="30px">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50px"
+
+            android:text="Deviner le nombre cacher"
+            android:textAlignment="center"
+            android:textColor="@color/azure"
+            android:textSize="20dp">
+
+        </TextView>
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50px"
+
+            android:text="Choisir un niveau:"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/azure"
+            android:textSize="39px"/>
+
+        <RadioGroup
+     android:layout_width="150dp"
+     android:layout_height="100dp"
+     android:layout_marginTop="15dp"
+     android:layout_marginLeft="130dp"
+     android:layout_marginRight="300dp"
+     android:orientation="vertical"
+            android:id="@+id/group"
+
+     >
+<RadioButton android:id="@+id/deb"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/d_butant"
+         android:textSize="35px"
+         android:textStyle="bold"
+        />
+     <RadioButton android:id="@+id/expert"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/expert"
+         android:textSize="35px"
+         android:textStyle="bold"
+        />
+ </RadioGroup>
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_btn"
+            android:layout_marginTop="20px"
+            android:onClick="nouvelle_partie"
+            android:text="@string/nouvelle_partie">
+
+        </Button>
+>
+        <EditText
+            android:id="@+id/num"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:background="@drawable/editttext_white"
+            android:layout_marginTop="30px"
+
+            android:hint="Tapez un nombre entre 0 et 1000"
+            android:inputType="number"
+            android:textAlignment="center">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_btn"
+            android:layout_marginTop="30px"
+            android:text="Valider">
+
+        </Button>
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20px"
+            android:textAlignment="center"
+            android:textColor="@color/fuchsia"
+            android:textSize="20px"></TextView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <ScrollView
+
+        android:layout_width="165dp"
+        android:layout_height="230dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/his"
+
+        android:background="@drawable/pink_button">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            android:layout_marginLeft="80px"
+            android:layout_marginTop="20px"
+            android:background="@drawable/white_background"
+            android:text="Historique"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"></TextView>
+    <TextView
+
+            android:id="@+id/historique"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+
+        android:layout_marginLeft="80px"
+            android:layout_marginTop="20px"
+            android:background="@drawable/white_background"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"></TextView>
+</LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+
+        android:layout_width="165dp"
+        android:layout_height="230dp"
+        android:layout_marginLeft="5dp"
+
+        android:layout_marginRight="5dp"
+
+        android:background="@drawable/pink_button">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="20px"
+            android:gravity="center_horizontal"
+            android:background="@drawable/white_background"
+            android:text="Top 10 Score"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"></TextView>
+    <TextView
+
+            android:id="@+id/topScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+        android:gravity="center_horizontal"
+
+        android:layout_marginTop="20px"
+            android:background="@drawable/white_background"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30px"></TextView>
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
